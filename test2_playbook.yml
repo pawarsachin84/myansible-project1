@@ -1,0 +1,10 @@
+- hosts: webserver
+  remote_user: ubuntu
+  become: true
+  gather_facts: true
+  roles:
+  - webserver
+- hosts: dbserver
+  remote_user: ec2-user
+  become: true
+  gather_facts: false
